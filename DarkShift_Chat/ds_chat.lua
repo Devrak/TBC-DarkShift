@@ -43,7 +43,7 @@ function ds_chat_init()
 	ChatFrame_OnHyperlinkShow = ds_chat_onItemRef
 	
 	-- Message Sending
-	ChatEdit_OnEnterPressed = ds_chat_editOnEnterPressed
+	-- ChatEdit_OnEnterPressed = ds_chat_editOnEnterPressed
 	
 	-- Store Org Addmsg
 	ds_chat.oaddm = ChatFrame1.AddMessage
@@ -93,6 +93,7 @@ function ds_chat_init()
 	hooksecurefunc("FCF_SetWindowName", ds_chat_onWindowName)
 	hooksecurefunc("ChatEdit_UpdateHeader", ds_chat_onHeaderUpdate)
 	hooksecurefunc("ChatEdit_OnEscapePressed",function(ceb) ceb:Hide() end)
+	hooksecurefunc("ChatEdit_SendText",function() ChatFrameEditBox:SetAttribute("stickyType", this:GetAttribute("chatType")) end)
 end
 
 function ds_chat_skinChat()
