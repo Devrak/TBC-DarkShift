@@ -1,0 +1,11 @@
+## Interface: 20400
+## Title: DarkShift
+## Version: 1.01 TBC
+## Notes: Core
+## Author: ©Devrak 2k18
+## SavedVariables: ds_glob_conf
+## SavedVariablesPerCharacter: ds_conf
+
+ds_lib.lua
+ds_opt.lua
+ds_core.lua

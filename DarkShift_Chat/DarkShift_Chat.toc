@@ -1,0 +1,12 @@
+## Interface: 20400
+## Title: DarkShift Chat
+## Version: 1.01 TBC
+## Notes: Chat Module
+## Author: ©Devrak 2k18
+## Dependencies: DarkShift
+
+ds_chat_opt.lua
+ds_chat_lib.lua
+ds_chat_blz.lua
+ds_chat.lua
+skins\list.lua
