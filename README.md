@@ -5,7 +5,7 @@ Chat addon for wow 2.4.3
 ## Installation
 
 Copy **DarkShift** and **DarkShift_Chat** folders from **TBC-DarkShift-master** folder to your WOW/Interface/Addons folder  
-Ingame you can type /dsc for options
+Ingame you can type "/dsc" for options
 
 ## About
 
