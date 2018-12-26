@@ -49,14 +49,21 @@ EMOTE_LIST = {
 	["%s[Pp]ogg?ers"] 		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Poggers.tga",
 	["%sPEP"] 				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Pep.tga",
 	["%s[Pp]epehands"] 		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepeHands.tga",
-	["%s[Ay][Yy][Yy]+"]	 	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\ayy.tga",
+	["%s[Aa][Yy][Yy]+"]	 	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\ayy.tga",
 	["%snotlikethis"]	 	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\NotLikeThis.tga",
 	["%s[Cc]mon[Bb]ruh"]	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\CmonBruh.tga",
 	["%s[Kk]appa"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Kappa.tga",
 	["%s[Ff]acepalm"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Facepalm.tga",
 	["%s[Ww]wow"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Wwow.tga",
 	["%s[Pp]epe[Ee]z"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepeEz.tga",
-	["%s[Tt]honk"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Thonk.tga"
+	["%s[Tt]honk"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Thonk.tga",
+	["%s[Jj]ebaited"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Jebaited.tga",
+	["%s[Gg]achi[Gg]asm"]	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\GachiGasm.tga",
+	["%s[lL][uU][lL][wW]"]	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\lulw.tga",
+	["%s[fF]eels[bB]ruh"]	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\FeelsBruh.tga",
+	["%s[pP]epeg[Ga]"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepeGa.tga",
+	["%s[wW]woke"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Wwoke.tga",
+	["%s[mM]onka[tT]"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaT.tga"
 }
 
 DSC_SKINS_LIST = {
