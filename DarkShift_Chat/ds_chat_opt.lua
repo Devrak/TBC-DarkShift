@@ -813,7 +813,7 @@ function ds_chat_optionsBuild()
 	opt.o6eK:SetHeight(30)
 	opt.o6eK:SetTexture("Interface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaT.tga")
 	
-	ds_DescString("Woke / woke",opt.o6,225,429,7)
+	ds_DescString("Wwoke / wwoke",opt.o6,225,429,7)
 	opt.o6eL = opt.o6:CreateTexture(nil, "BACKGROUND")
 	opt.o6eL:SetPoint("TOPLEFT", opt.o6 ,"TOPLEFT", 230, -440)
 	opt.o6eL:SetWidth(30)
