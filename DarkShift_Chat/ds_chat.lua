@@ -142,14 +142,14 @@ function ds_chat_skinChat()
 		local tab		= _G[frameName.."Tab"]
 		local tabText   = _G[frameName.."TabText"]
 		local reg0 , _ 	=  chatFrame:GetRegions()	
-		local reg1 		= _G[frameName.."ResizeTopLeft"]
+		local reg1		= _G[frameName.."ResizeTopLeft"]
 		local reg2		= _G[frameName.."ResizeBottomLeft"]
 		local reg3		= _G[frameName.."ResizeTopRight"]
-		local reg4 		= _G[frameName.."ResizeBottomRight"]
-		local reg5 		= _G[frameName.."ResizeLeft"]
-		local reg6 		= _G[frameName.."ResizeRight"]
-		local reg7 		= _G[frameName.."ResizeBottom"]
-		local reg8 		= _G[frameName.."ResizeTop"]
+		local reg4		= _G[frameName.."ResizeBottomRight"]
+		local reg5		= _G[frameName.."ResizeLeft"]
+		local reg6		= _G[frameName.."ResizeRight"]
+		local reg7		= _G[frameName.."ResizeBottom"]
+		local reg8		= _G[frameName.."ResizeTop"]
 		local regX
 		
 		-- Scrolling
