@@ -9,7 +9,7 @@ Ingame you can type "/dsc" for options
 
 ## About
 
-A lightweight wow chat addon that is intended to increase chat experience by adding better graphics and some very needed modern features This is my first somewhat serious piece of Lua code so please be understanding If you have comments / bug reports or want some other features then please drop them in Issues Section.
+A lightweight wow chat addon with Twitch emoji support that is intended to increase chat experience by adding better graphics and some very needed modern features This is my first somewhat serious piece of Lua code so please be understanding If you have comments / bug reports or want some other features then please drop them in Issues Section.
 
 ## Features
 
