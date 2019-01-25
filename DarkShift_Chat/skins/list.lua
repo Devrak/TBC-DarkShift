@@ -1,7 +1,7 @@
 --[[
 Addon: DarkShift UI
 Module: Custom Skins
-Developed by: ©Devrak 2k18
+Developed by: ©Devrak 2k19
 ]]--
 
 
@@ -52,7 +52,7 @@ DSC_SKINS_LIST["Simple"] =
 		}
 	},
 	["EditPosx"] = "BOTTOM",
-	["EditFont"] = FONTS_LIST["ARIALN"],
+	["EditFont"] = "Fonts\\ARIALN.TTF",
 	["EditSize"] = 14,
 	["EditShad"] = 0.5,
 	["EditPdLn"] = 24,
@@ -68,7 +68,7 @@ DSC_SKINS_LIST["Simple"] =
 		},
 		["Color"] = {r = 0, g = 0, b = 0,a = 0.5}
 	},
-	["TabFoFam"] = FONTS_LIST["Oswald"],
+	["TabFoFam"] = "Interface\\AddOns\\DarkShift\\lib\\fonts\\Oswald.ttf",
 	["TabFoCol"] = {r = 0, g = 0, b = 0, a = 1},
 	["TabFoSiz"] = 11,
 	["TabFoShd"] = 0,
@@ -82,7 +82,7 @@ DSC_SKINS_LIST["Simple"] =
 	["TabAlph2"] = 0.75,
 	["TabAlcol"] = {r = 0, g = 0, b = 0},
 	["ChatBtns"] = false,
-	["ChatFont"] = FONTS_LIST["ARIALN"],
+	["ChatFont"] = "Fonts\\ARIALN.TTF",
 	["ChatSize"] = 12,
 	["ChatShad"] = 0.5,
 	["ChatBgTx"] = "Simple",
