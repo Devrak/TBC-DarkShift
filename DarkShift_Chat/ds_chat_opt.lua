@@ -867,7 +867,7 @@ local function ds_chat_optionsBuild()
 	opt.o5sC:SetScript("OnClick", function() ds_conf.chat.NameColo = opt.o5sC:GetChecked() end)
 	
 	-- Level Based Ignore
-	ds_TitleString("Ignore Whipers bellow level",opt.o5,16,319)
+	ds_TitleString("Ignore whispers bellow level",opt.o5,16,319)
 	builder = ds_editBox(opt,"dsc_o5sD",ds_conf.chat.MsgLevel or "",60,32,1037)
 	builder:SetScript("OnTextChanged" , function() ds_conf.chat.MsgLevel = tonumber(dsc_o5sD:GetText()) or 0 end)
 	
