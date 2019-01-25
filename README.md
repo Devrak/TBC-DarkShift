@@ -9,21 +9,24 @@ Ingame you can type "/dsc" for options
 
 ## About
 
-A lightweight wow chat addon with Twitch emoji support that is intended to increase chat experience by adding better graphics and some very needed modern features This is my first somewhat serious piece of Lua code so please be understanding If you have comments / bug reports or want some other features then please drop them in Issues Section.
+A lightweight wow chat addon with emote and emoji support that is intended to increase chat experience by adding better graphics and some very needed features. This is my first somewhat serious piece of Lua code so please be understanding. If you have comments / bug reports or want some other features then please drop them in Issues Section.
 
 ## Features
 
-- 2 Different themes with different fonts and backgrounds
-- Client side support for Emoji
+- 2 Additional skins with different fonts and backgrounds
+- Client side support for Emotes and Emoji
 - Timestamps
-- URL Copy
-- Fast apply / invite to groups
+- URL copy
+- Class colors in chat
+- Level based filter for Whipers & Chat
+- Fast apply / invite to groups ( wiki for details )
+- Custom Highlighting for Guild / Self / Whispers
 - Sticky Channels
-- Custom Highlighting
 
 ## Versions
 
-- v1.01 Inital release
+- v1.01 Inital prerelease
+- v1.02 Release
 
 ## Support
 
