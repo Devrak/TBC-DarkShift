@@ -1364,7 +1364,7 @@ function ds_chat_init()
 		if not IsCombatLog(_G["ChatFrame"..i]) then _G["ChatFrame"..i].AddMessage = ds_chat_onAddMessage end
 		
 		-- More Text
-		_G["ChatFrame"..i]:SetMaxLines(1500)
+		_G["ChatFrame"..i]:SetMaxLines(900)
 	end
 	
 	-- Events
