@@ -1,37 +1,57 @@
 --[[
 Addon: DarkShift UI
 Module: Chat
-Developed by: ©Devrak 2k18
+Developed by: ©Devrak 2k19
 ]]--
 
 
-GUILD_LIST = {}
-FREND_LIST = {}
-EMOJI_LIST = {
+DSC_CLASS_COLORS = {
 
-	[":seemsgoodman:"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\SeemsGoodMan.tga",
-	[":feelsgoodman:"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\FeelsGoodMan.tga",
-	[":feelsbadman:"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\FeelsBadMan.tga",
-	[":ree:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Ree.tga",
-	[":lul:"] 				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\lul.tga",
-	[":omegalul:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Omega.tga",
-	[":monkas:"] 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaS.tga",
-	[":wesmart:"] 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\WeSmart.tga",
-	[":pogchamp:"] 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PogChamp.tga",
-	[":poggers:"] 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Poggers.tga",
-	[":pep:"] 				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Pep.tga",
-	[":pepehands:"] 		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepeHands.tga",
-	[":ayy:"]	 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\ayy.tga",
-	[":notlikethis:"]	 	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\NotLikeThis.tga",
-	[":cmonbruh:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\CmonBruh.tga",
-	[":kappa:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Kappa.tga",
-	[":facepalm:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Facepalm.tga",
-	[":wwow:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Wwow.tga",
-	[":pepeez:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepeEz.tga",
-	[":thonk:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Thonk.tga"
+	["WARRIOR"]		= "C79C6E",
+	["WARLOCK"]		= "8787ED",
+	["SHAMAN"]		= "0071DE",
+	["ROGUE"]		= "FFF569",
+	["PRIEST"]		= "FFFFFF",
+	["PALADIN"]		= "F58CBA",
+	["MAGE"]		= "40C7EB",
+	["HUNTER"]		= "ABD473",
+	["DRUID"]		= "FF7D0A",
 }
 
-EMOTE_LIST = {
+DSC_EMOJI_LIST = {
+
+	["%s;%)"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\1.tga",
+	["%s;[Pp]"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\2.tga",
+	["%s':D"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\3.tga",
+	["%s=%)"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\4.tga",
+	["%s8%)"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\5.tga",
+	["%s:%("]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\6.tga",
+	["%s:%)"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\7.tga",
+	["%s:'"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\8.tga",
+	["%s:3"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\9.tga",
+	["%s:D"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\10.tga",
+	["%s[;:][Oo]"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\11.tga",
+	["%s:[Pp]"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\12.tga",
+	["%s:%|"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\13.tga",
+	["%s:/"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\14.tga",
+	["%s:\\"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\15.tga",
+	["%s:%*"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\16.tga",
+	["%sD:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\17.tga",
+	["%sQ[Q]+"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\18.tga",
+	["%s:'("]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\18.tga",
+	["%s@_@"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\19.tga",
+	["%s[Xx][Dd]"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\20.tga",
+	["%s[Xx][Oo]"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\21.tga",
+	["%s[Xx][Pp]"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\22.tga",
+	["%s[Xx][Ss]"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\23.tga",
+	["%s[Zz][Zz]+"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\24.tga",
+	["%s[Xx]%("]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\25.tga",
+	["%s<3"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\26.tga",
+	["%s</3"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\27.tga",
+	["%so%$"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emoji\\28.tga",
+}
+
+DSC_EMOTE_LIST = {
 
 	["%sseemsgoodman"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\SeemsGoodMan.tga",
 	["%sfeelsgoodman"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\FeelsGoodMan.tga",
@@ -43,6 +63,7 @@ EMOTE_LIST = {
 	["%s[lL][uU][lL][zZ]?"] = " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\lul.tga",
 	["%somegalul"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Omega.tga",
 	["%sOMEGALUL"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Omega.tga",
+	["%s[Mm]onkaSSS"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaSSS.tga",
 	["%s[Mm]onka[Ss]"] 		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaS.tga",
 	["%s[Ww]e[Ss]mart"] 	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\WeSmart.tga",
 	["%s[Pp]og[Cc]hamp"] 	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PogChamp.tga",
@@ -63,7 +84,42 @@ EMOTE_LIST = {
 	["%s[fF]eels[bB]ruh"]	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\FeelsBruh.tga",
 	["%s[pP]epeg[Ga]"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepeGa.tga",
 	["%s[wW]woke"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Wwoke.tga",
-	["%s[mM]onka[tT]"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaT.tga"
+	["%s[mM]onka[tT]"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaT.tga",
+	["%s[mM]onkaOMEGA"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaOMEGA.tga",
+	["%s[mM]OMEGA"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaOMEGA.tga",
+	["%s[pP]epe[Cc]omfy"]	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepeComfy.tga",
+	["%sCLAP"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\CLAP.tga",
+	["%sPOG"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\POG.tga",
+	["%s[pP]epe[Pp]ains"]	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepePains.tga",
+	["%s[Hh]ypers"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Hypers.tga",
+	["%s[Mm]onka[Tt]hink"]	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaThink.tga",
+	["%sflman"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\FeelsLoveMan.tga",
+}
+
+DSC_EMOTE_CODES = {
+
+	[":seemsgoodman:"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\SeemsGoodMan.tga",
+	[":feelsgoodman:"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\FeelsGoodMan.tga",
+	[":feelsbadman:"]		= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\FeelsBadMan.tga",
+	[":ree:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Ree.tga",
+	[":lul:"] 				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\lul.tga",
+	[":omegalul:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Omega.tga",
+	[":monkas:"] 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaS.tga",
+	[":wesmart:"] 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\WeSmart.tga",
+	[":pogchamp:"] 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PogChamp.tga",
+	[":poggers:"] 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Poggers.tga",
+	[":pep:"] 				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Pep.tga",
+	[":ayy:"]	 			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\ayy.tga",
+	[":notlikethis:"]	 	= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\NotLikeThis.tga",
+	[":cmonbruh:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\CmonBruh.tga",
+	[":kappa:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Kappa.tga",
+	[":facepalm:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Facepalm.tga",
+	[":wwow:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Wwow.tga",
+	[":pepeez:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\PepeEz.tga",
+	[":thonk:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\Thonk.tga",
+	[":clap:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\CLAP.tga",
+	[":pog:"]				= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\POG.tga",
+	[":monkasss:"]			= " |TInterface\\AddOns\\DarkShift_Chat\\lib\\emotes\\MonkaSSS.tga",
 }
 
 DSC_SKINS_LIST = {
@@ -114,7 +170,7 @@ DSC_SKINS_LIST = {
 			}
 		},
 		["EditPosx"] = "BOTTOM",
-		["EditFont"] = FONTS_LIST["ARIALN"],
+		["EditFont"] = "Fonts\\ARIALN.TTF",
 		["EditSize"] = 14,
 		["EditShad"] = 0.5,
 		["EditPdLn"] = 33,
@@ -131,7 +187,7 @@ DSC_SKINS_LIST = {
 			["None"] = {},
 			["Color"] = {r = 0, g = 0, b = 0,a = 1}
 		},
-		["TabFoFam"] = FONTS_LIST["FRIZQT"],
+		["TabFoFam"] = "Fonts\\FRIZQT__.TTF",
 		["TabFoCol"] = {r = 0.999, g = 0.819, b = 0, a = 1},
 		["TabFoSiz"] = 10,
 		["TabFoShd"] = 0.5,
@@ -145,7 +201,7 @@ DSC_SKINS_LIST = {
 		["TabAlph2"] = 1,
 		["TabAlcol"] = {r = 0, g = 0, b = 0},
 		["ChatBtns"] = true,
-		["ChatFont"] = FONTS_LIST["ARIALN"],
+		["ChatFont"] = "Fonts\\ARIALN.TTF",
 		["ChatSize"] = 14,
 		["ChatShad"] = 1,
 		["ChatBgTx"] = "Blizzard",
@@ -209,7 +265,7 @@ DSC_SKINS_LIST = {
 			[10] = "Blizzard"
 		},
 		["ChatBase"] = 0.25,
-		["EmojiPix"] = 41,
+		["emotesPix"] = 42,
 		["TimeStmp"] = "Not",
 		["TimeColo"] = "ffffff",
 		["SelfColo"] = "ace5ee",
@@ -262,7 +318,7 @@ DSC_SKINS_LIST = {
 			}
 		},
 		["EditPosx"] = "TOP",
-		["EditFont"] = FONTS_LIST["ARIALN"],
+		["EditFont"] = "Fonts\\ARIALN.TTF",
 		["EditSize"] = 14,
 		["EditShad"] = 0.5,
 		["EditPdLn"] = 30,
@@ -278,7 +334,7 @@ DSC_SKINS_LIST = {
 			},
 			["Color"] = {r = 0, g = 0, b = 0,a = 1},
 		},
-		["TabFoFam"] = FONTS_LIST["ARIALN"],
+		["TabFoFam"] = "Fonts\\ARIALN.TTF",
 		["TabFoCol"] = {r = 0, g = 0, b = 0, a = 1},
 		["TabFoSiz"] = 11,
 		["TabFoShd"] = 0,
@@ -292,7 +348,7 @@ DSC_SKINS_LIST = {
 		["TabAlph2"] = 0.6,
 		["TabAlcol"] = {r = 0.64,g = 0.02,b = 0.02 },
 		["ChatBtns"] = false,
-		["ChatFont"] = FONTS_LIST["ARIALN"],
+		["ChatFont"] = "Fonts\\ARIALN.TTF",
 		["ChatSize"] = 12,
 		["ChatShad"] = 0.5,
 		["ChatBgTx"] = "TextureL",
@@ -473,7 +529,7 @@ DSC_SKINS_LIST = {
 			[10] = "TextureL"
 		},
 		["ChatBase"] = 1,
-		["EmojiPix"] = 41,
+		["emotesPix"] = 42,
 		["TimeStmp"] = "Not",
 		["TimeColo"] = "ffffff",
 		["SelfColo"] = "ace5ee",
@@ -483,6 +539,7 @@ DSC_SKINS_LIST = {
 }
 
 DSC_TEMPLATE = {
+
 	["SkinName"] = "",
 	["EditBgTx"] = "",
 	["EditBgTs"] = {},
@@ -526,11 +583,14 @@ DSC_TEMPLATE = {
 			[10] = ""
 		},
 	["ChatBase"] = 1,
-	["EmojiPix"] = 41,
+	["emotesPix"] = 42,
 	["TimeStmp"] = "",
 	["TimeColo"] = "",
 	["SelfColo"] = "",
 	["HlinColo"] = "",
 	["applyGrp"] = "",
-	["GinvColo"] = ""
+	["GinvColo"] = "",
+	["NameColo"] = 0,
+	["MsgLevel"] = 0,
+	["MsgChans"] = 0,
 }

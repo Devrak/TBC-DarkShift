@@ -1,10 +1,10 @@
 --[[
 Addon: DarkShift UI
-Module: Chat
-Developed by: ©Devrak 2k18
+Module: Chat & Docking Override & Fix
+Developed by: ©Devrak 2k19
 ]]--
 
--- Docking handling function Override
+
 function FCF_OnUpdate(elapsed)
 
 	-- Need to draw the dock regions for a frame to define their rects
@@ -204,7 +204,7 @@ function FCF_OnUpdate(elapsed)
 			end 
 		end
 	end
-		
+	
 	-- If the default chat frame is resizing, then resize the dock
 	if ( DEFAULT_CHAT_FRAME.resizing ) then
 		FCF_DockUpdate();
