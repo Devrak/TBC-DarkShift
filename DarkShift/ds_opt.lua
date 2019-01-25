@@ -1,7 +1,7 @@
 --[[
 Addon: DarkShift UI
-Module: Core
-Developed by: ©Devrak 2k18
+Module: Core , Opts
+Developed by: ©Devrak 2k19
 ]]--
 
 
@@ -11,8 +11,9 @@ function ds_options()
 	ds.opt = CreateFrame("Frame", nil, UIParent)
 	ds.opt.name = "DarkShift"
 	
+	-- Title
 	ds_BigTitleString(ds.opt.name,ds.opt,15,14,true)
-	ds_DescString("Developed by: Devrak 2k18",ds.opt,15,55)
+	ds_DescString("Developed by: Devrak 2k19",ds.opt,15,55)
 	
 	-- Git
 	ds.opt.git = CreateFrame("EditBox", nil, ds.opt)
@@ -36,5 +37,9 @@ function ds_options()
 	-- GUI Reload
 	SLASH_DS1 = "/rl"
 	SlashCmdList["DS"] = function() ReloadUI(); end
+	
+	-- DB Flush
+	SLASH_DSDBFLUSH1 = "/dsdbflush"
+	SlashCmdList["DSDBFLUSH"] = function() ds_db = {} DEFAULT_CHAT_FRAME:AddMessage("DB Cleared",0.74,0.02,0.02) end
 	
 end

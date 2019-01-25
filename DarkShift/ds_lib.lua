@@ -1,7 +1,7 @@
 --[[
 Addon: DarkShift UI
-Module: stuff library ( Stuff is stuff its not all mine )
-Developed by: ©Devrak 2k18
+Module: Core , Stuff( Stuff is stuff its mine and some from public domain )
+Developed by: ©Devrak 2k19
 ]]--
 
 -- Blizzard Dropdown SetVal Fix
@@ -47,9 +47,9 @@ function ShowColorPicker(r, g, b, a, changedCallback)
 	ColorPickerFrame:SetColorRGB(r,g,b);
 	ColorPickerFrame.hasOpacity, ColorPickerFrame.opacity = (a ~= nil), a;
 	ColorPickerFrame.previousValues = {r,g,b,a};
-	ColorPickerFrame.func, ColorPickerFrame.opacityFunc, ColorPickerFrame.cancelFunc = changedCallback, changedCallback, changedCallback;
-	ColorPickerFrame:Hide(); -- Need to run the OnShow handler.
-	ColorPickerFrame:Show();
+	ColorPickerFrame.func, ColorPickerFrame.opacityFunc, ColorPickerFrame.cancelFunc = changedCallback, changedCallback, changedCallback
+	ColorPickerFrame:Hide()
+	ColorPickerFrame:Show()
 end
 
 -- Decimal color to Hex color
@@ -66,16 +66,17 @@ function colorToRGB(hex)
 	return tonumber(rhex, 16)/255, tonumber(ghex, 16)/255, tonumber(bhex, 16)/255
 end
 
--- Title In Custom Font
+-- Title With Custom Font
 function ds_BigTitleString(text,frame,offsetx,offsety,white)
 	local title = frame:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
 	title:SetPoint("TOPLEFT", frame, "TOPLEFT", offsetx, -offsety)
-	title:SetFont(FONTS_LIST["Balthazar"], 24)
+	title:SetFont(DS_FONTS_LIST["Balthazar"], 24)
 	title:SetText(text)
 	title:SetJustifyH("LEFT")
 	if white then title:SetTextColor(1,1,1,0.9) end
 end
 
+-- Title With Custom Font
 function ds_TitleString(text,frame,offsetx,offsety)
 	local title = frame:CreateFontString(nil, "ARTWORK", "GameFontNormal")
 	title:SetPoint("TOPLEFT", frame, "TOPLEFT", offsetx, -offsety)
@@ -132,7 +133,7 @@ function ds_editBox(frame,globaName,text,width,offsetx,offsety)
 	editBox:SetHeight(20)
 	editBox:SetWidth(width)
 	editBox:SetAutoFocus(0)
-	editBox:SetScript("OnEnterPressed", function() this:ClearFocus() end)
+	editBox:SetScript("OnEnterPressed", function() this:ClearFocus() this:HighlightText(0,0) end)
 	editBox:SetScript("OnEscapePressed", function() this:ClearFocus() this:HighlightText(0,0) end)
 	editBox:SetText(text)
 	editBox:SetParent(frame)
@@ -155,20 +156,20 @@ function ds_CustomBg(frame,width,height,offsetx,offsety)
 end
 
 -- Fonts
-FONTS_LIST =
+DS_FONTS_LIST =
 {
 	["ABeeZee"]	 	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\ABeeZee.ttf",
 	["ARIALN"]	 	= "Fonts\\ARIALN.TTF",
 	["Aleo"]	 	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Aleo.ttf",
 	["Almendra"] 	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Almendra.ttf",
 	["Balthazar"]	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Balthazar.ttf",
-	["Chivo"]	 	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Chivo.ttf",
+	["Cmu"] 		= "Interface\\AddOns\\DarkShift\\lib\\fonts\\CmuTypewriter.ttf",
 	["FRIZQT"]	 	= "Fonts\\FRIZQT__.TTF",
-	["Inconsolata"]	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Inconsolata.ttf",
+	["LibSansNarr"]	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\LiberationSansNarrow.ttf",
+	["Mops"]		= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Mops.ttf",
 	["NotoSans"]	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\NotoSansSC.ttf",
-	["OCR-A"]	 	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\OCR-A.ttf",
 	["Oswald"]	 	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Oswald.ttf",
-	["Pica"]	 	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Pica.ttf",
 	["Rajdhani"] 	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Rajdhani.ttf",
-	["Yantramanav"]	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Yantramanav.ttf"
+	["Unique"]		= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Unique.ttf",
+	["Yantramanav"]	= "Interface\\AddOns\\DarkShift\\lib\\fonts\\Yantramanav.ttf",
 }
